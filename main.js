@@ -105,6 +105,9 @@ function deleteItem(index) {
   products.splice(index, 1);
   saveToLocalStorage('products', products);
   displayData(products);
+
+  updating = false;
+  productBtn.innerHTML = 'Add Product';
 }
 
 function saveToLocalStorage(myKey, myValue) {

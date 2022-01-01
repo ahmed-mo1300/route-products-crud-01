@@ -106,6 +106,10 @@ function deleteItem(index) {
   saveToLocalStorage('products', products);
   displayData(products);
 
+  if (products.length === 0) {
+    localStorage.clear();
+  }
+
   updating = false;
   productBtn.innerHTML = 'Add Product';
 }
